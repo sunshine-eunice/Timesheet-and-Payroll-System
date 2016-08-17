@@ -14,7 +14,7 @@ namespace MGM_TimeKeeping_Payroll
 {
     public partial class EmployeeEntry : Form
     {
-        public const string con = @"Data Source=MGMITM02;Initial Catalog=Test1;Persist Security Info=True;User ID=sa; Password=1234";
+        public const string con = @"Data Source=MGMITM02;Initial Catalog=db_Payroll;Persist Security Info=True;User ID=sa; Password=1234";
         public EmployeeEntry()
         {
             InitializeComponent();
@@ -31,16 +31,16 @@ namespace MGM_TimeKeeping_Payroll
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            tb_age.Clear();
+            /* tb_age.Clear();
             DateTime today = DateTime.Today;
             DateTime byear = dt_bdate.Value.Date;
             int c = ComputeAge(today.Year, byear.Year);
-            tb_age.Text += c;
+            tb_age.Text += c; */
         }
         #region DatePickers Settings
         private void Datepickers()
         {
-            dt_bdate.Format = DateTimePickerFormat.Custom;
+          /*  dt_bdate.Format = DateTimePickerFormat.Custom;
             dt_datejoined.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dateTimePicker4.Format = DateTimePickerFormat.Custom;
@@ -49,7 +49,7 @@ namespace MGM_TimeKeeping_Payroll
             dt_bdate.CustomFormat = "MM/dd/yyyy";
             dt_datejoined.CustomFormat = "MM/dd/yyyy";
             dateTimePicker3.CustomFormat = "MM/dd/yyyy";
-            dateTimePicker4.CustomFormat = "MM/dd/yyyy";
+            dateTimePicker4.CustomFormat = "MM/dd/yyyy"; */
         }
         #endregion DatePicker Settings
         #region ComputeAge
@@ -112,17 +112,17 @@ namespace MGM_TimeKeeping_Payroll
             cb_gender.Items.Add(new ComboBoxItem("1", "Female"));
 
             //Civil Status
-            cb_CivilStat.Items.Add(new ComboBoxItem("0","Single"));
+         /*   cb_CivilStat.Items.Add(new ComboBoxItem("0","Single"));
             cb_CivilStat.Items.Add(new ComboBoxItem("1", "Married"));
             cb_CivilStat.Items.Add(new ComboBoxItem("2", "Widowed"));
             cb_CivilStat.Items.Add(new ComboBoxItem("3", "Annulled"));
 
             //Highes Educ Level
-            cb_higheduclvl.Items.Add(new ComboBoxItem("0","High School"));
+        /*    cb_higheduclvl.Items.Add(new ComboBoxItem("0","High School"));
             cb_higheduclvl.Items.Add(new ComboBoxItem("1", "Bachelor Degree"));
             cb_higheduclvl.Items.Add(new ComboBoxItem("2","Vocational"));
             cb_higheduclvl.Items.Add(new ComboBoxItem("3","Master's Degree"));
-            cb_higheduclvl.Items.Add(new ComboBoxItem("4","Doctorate Degree"));
+            cb_higheduclvl.Items.Add(new ComboBoxItem("4","Doctorate Degree")); */
             #endregion Personal Info
             #region Employment Info
             //Company Grps
@@ -190,7 +190,65 @@ namespace MGM_TimeKeeping_Payroll
             cb_bank.Items.Add(new ComboBoxItem("7", "RCBC"));
             #endregion Employment Info
         }
-        #endregion Employee Entry Comboboxes            
+        #endregion Employee Entry Comboboxes                        
+
+        private void label80_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_SSSid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_picture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box
+                PicBox_Pic.Image = new Bitmap(open.FileName);              
+            } 
+        }
+
+        
+
+     
+
+       
 
     }
 }

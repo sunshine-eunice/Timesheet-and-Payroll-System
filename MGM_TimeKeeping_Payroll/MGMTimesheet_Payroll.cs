@@ -56,6 +56,13 @@ namespace MGM_TimeKeeping_Payroll
             EmployeeTnP form = new EmployeeTnP();
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog();
+        }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeeEntry form = new EmployeeEntry();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
         }      
     }
 }

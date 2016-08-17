@@ -19,7 +19,7 @@ namespace MGM_TimeKeeping_Payroll
         }
 
         private void btn_ok_Click(object sender, EventArgs e)  {
-            SqlConnection cn = new SqlConnection(@"Data Source=MGMITM02;Initial Catalog=Test1;Persist Security Info=True;User ID=sa; Password=1234");
+            SqlConnection cn = new SqlConnection(@"Data Source=MGMITM02;Initial Catalog=db_Payroll;Persist Security Info=True;User ID=sa; Password=1234");
                 cn.Open();
                 SqlCommand cmd  =   new SqlCommand("SELECT * FROM login WHERE Username= '"+tb_username.Text+"' AND Password= '"+tb_password.Text+"'", cn);
                 SqlDataReader dr;
