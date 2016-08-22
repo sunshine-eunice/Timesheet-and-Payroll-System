@@ -199,7 +199,68 @@ namespace MGM_TimeKeeping_Payroll
             #endregion Employment Info
         }
         #endregion Employee Entry Comboboxes                        
+<<<<<<< HEAD
     
+=======
+
+        private void label80_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_SSSid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_picture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box
+                PicBox_Pic.Image = new Bitmap(open.FileName);              
+            } 
+        }
+
+        
+
+     
+
+       
+>>>>>>> d4de6728625338ac75e2e0219699a2c8800feaa1
 
         private void btn_picture_Click(object sender, EventArgs e)
         {
