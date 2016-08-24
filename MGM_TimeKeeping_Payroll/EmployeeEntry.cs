@@ -14,11 +14,13 @@ namespace MGM_TimeKeeping_Payroll
 {
     public partial class EmployeeEntry : Form
     {
-        public const string con = @"Data Source=MGMITM02;Initial Catalog=Test1;Persist Security Info=True;User ID=sa; Password=1234";
+        public const string con = @"Data Source=MGMITM02;Initial Catalog=db_Payroll;Persist Security Info=True;User ID=sa; Password=1234";
+        SqlConnection conn = new SqlConnection(con);
         public EmployeeEntry()
         {
             InitializeComponent();
             AddComboBoxesItems();
+            AddNationality();
 
         }
         //public _companygrp CompGrp { get; set; }
@@ -31,24 +33,24 @@ namespace MGM_TimeKeeping_Payroll
         }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            tb_age.Clear();
+            /* tb_age.Clear();
             DateTime today = DateTime.Today;
             DateTime byear = dt_bdate.Value.Date;
             int c = ComputeAge(today.Year, byear.Year);
-            tb_age.Text += c;
+            tb_age.Text += c; */
         }
         #region DatePickers Settings
         private void Datepickers()
         {
-            dt_bdate.Format = DateTimePickerFormat.Custom;
+           dt_bdate.Format = DateTimePickerFormat.Custom;
             dt_datejoined.Format = DateTimePickerFormat.Custom;
-            dateTimePicker3.Format = DateTimePickerFormat.Custom;
+         //   dtEffectivedate.Format = DateTimePickerFormat.Custom;
             dateTimePicker4.Format = DateTimePickerFormat.Custom;
-            dategrad.Format = DateTimePickerFormat.Custom;
-            dategrad.CustomFormat = "MM/dd/yyyy";
+           /* dategrad.Format = DateTimePickerFormat.Custom;
+            dategrad.CustomFormat = "MM/dd/yyyy"; */
             dt_bdate.CustomFormat = "MM/dd/yyyy";
             dt_datejoined.CustomFormat = "MM/dd/yyyy";
-            dateTimePicker3.CustomFormat = "MM/dd/yyyy";
+         //   dtEffectivedate.CustomFormat = "MM/dd/yyyy";
             dateTimePicker4.CustomFormat = "MM/dd/yyyy";
         }
         #endregion DatePicker Settings
@@ -66,27 +68,8 @@ namespace MGM_TimeKeeping_Payroll
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
-        {           
-            SqlConnection conn = new SqlConnection(con);     
-            string query = "INSERT INTO Employee_Profile (company, employee_corp, office_branch, Employee_LName, Employee_MName, Employee_FName, birthdate, date_hired, date_start, date_left, employee_status, employee_SSSID, employee_phlhealthID, employee_tin_ID, employee_hdmfID, gender, Nationality, civilstatus, noofchildren, schoolgraduated, dategraduated, highestEducLvl, employee_SSSID, employee_hdmfID, employee_tin_ID) VALUES (@company, @employee_corp, @office_branch, @Employee_LName, @Employee_MName, @Employee_FName, @birthdate, @date_joined, @date_left, @employee_status, @employee_SSSID, @employee_phlhealthID, @employee_tin_ID, @employee_hdmfID, @gender, @Nationality, @civilstatus, @noofchildren, @schoolgraduated, @dategraduated, @highestEducLvl, @employee_SSSID, @employee_hdmfID, @employee_tin_ID)";
-            try
-            {
-                conn.Open();
-                SqlCommand querysave_EmPfile = new SqlCommand(query, conn);
-                querysave_EmPfile.Parameters.Add("@company", SqlDbType.VarChar, 3).Value = tb_company.Text;
-                querysave_EmPfile.Parameters.Add("@employee_corp", SqlDbType.VarChar, 50).Value = cb_grpofcom.Text;
-                querysave_EmPfile.Parameters.Add("@office_branch", SqlDbType.VarChar, 4).Value = cb_officebranch.Text;
-                querysave_EmPfile.Parameters.Add("@Employee_LName", SqlDbType.VarChar, 50).Value = tb_LName.Text;
-                querysave_EmPfile.Parameters.Add("@Employee_MName", SqlDbType.VarChar, 50).Value = tb_MName.Text;
-                querysave_EmPfile.Parameters.Add("@Employee_FName", SqlDbType.VarChar, 4).Value = tb_FName.Text;
-                querysave_EmPfile.Parameters.Add("@birthdate", SqlDbType.Date).Value = dt_bdate;
-                querysave_EmPfile.Parameters.Add("@date_hired", SqlDbType.Date).Value = dt_bdate;
-                querysave_EmPfile.ExecuteNonQuery();
-            }
-            finally
-            {
-                conn.Close();
-            }           
+        {
+            AddEmployeeMaster();      
         }
         private void cb_formpayment_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -108,21 +91,21 @@ namespace MGM_TimeKeeping_Payroll
         {
             #region Personal Info
             //Gender
-            cb_gender.Items.Add(new ComboBoxItem("0","Male"));
-            cb_gender.Items.Add(new ComboBoxItem("1", "Female"));
+            cb_sex.Items.Add(new ComboBoxItem("0","Male"));
+            cb_sex.Items.Add(new ComboBoxItem("1", "Female"));
 
             //Civil Status
-            cb_CivilStat.Items.Add(new ComboBoxItem("0","Single"));
+         /*   cb_CivilStat.Items.Add(new ComboBoxItem("0","Single"));
             cb_CivilStat.Items.Add(new ComboBoxItem("1", "Married"));
             cb_CivilStat.Items.Add(new ComboBoxItem("2", "Widowed"));
             cb_CivilStat.Items.Add(new ComboBoxItem("3", "Annulled"));
 
             //Highes Educ Level
-            cb_higheduclvl.Items.Add(new ComboBoxItem("0","High School"));
+        /*    cb_higheduclvl.Items.Add(new ComboBoxItem("0","High School"));
             cb_higheduclvl.Items.Add(new ComboBoxItem("1", "Bachelor Degree"));
             cb_higheduclvl.Items.Add(new ComboBoxItem("2","Vocational"));
             cb_higheduclvl.Items.Add(new ComboBoxItem("3","Master's Degree"));
-            cb_higheduclvl.Items.Add(new ComboBoxItem("4","Doctorate Degree"));
+            cb_higheduclvl.Items.Add(new ComboBoxItem("4","Doctorate Degree")); */
             #endregion Personal Info
             #region Employment Info
             //Company Grps
@@ -190,7 +173,70 @@ namespace MGM_TimeKeeping_Payroll
             cb_bank.Items.Add(new ComboBoxItem("7", "RCBC"));
             #endregion Employment Info
         }
-        #endregion Employee Entry Comboboxes            
+        #endregion Employee Entry Comboboxes                        
+    
 
+        private void btn_picture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box
+                PicBox_Pic.Image = new Bitmap(open.FileName);              
+            } 
+        }
+
+        private void AddEmployeeMaster() {
+            try
+            {
+                conn.Open();
+                SqlCommand InsertEmployeeMasteer = new SqlCommand("SPInsertMasterEmployee", conn);
+                InsertEmployeeMasteer.CommandType = CommandType.StoredProcedure;
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpID", tb_EmployeeID.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpFName", tb_FName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpMName", tb_MName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpLName", tb_LName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSuffix", tb_Suffix.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@birthdate", dt_bdate.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@CivilStatus", cb_CivilStat.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@Nationality", cb_Nationality.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpTIN", tb_TIN.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSSS", tb_SSS.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpPhilhealthID", tb_PHealth.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSCd", cb_INScode.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSName", tb_INSName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthInsID", tb_insID.Text));
+
+            }
+            finally
+            {
+                conn.Close();
+            }  
+        }
+
+        private void AddEmployeeParents() { 
+            
+        }
+        private void AddNationality() {
+
+            try
+            {
+                conn.Open();
+                SqlCommand ChooseNatl = new SqlCommand("SelectNationality", conn);
+                ChooseNatl.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter testcon = new SqlDataAdapter(ChooseNatl);
+                ChooseNatl.ExecuteNonQuery();
+                DataSet dtNatlity = new DataSet();
+                testcon.Fill(dtNatlity);
+                cb_Nationality.DataSource = dtNatlity.Tables[0];
+            }
+            finally
+            {
+                conn.Close();
+            }
+    }
+       
     }
 }
