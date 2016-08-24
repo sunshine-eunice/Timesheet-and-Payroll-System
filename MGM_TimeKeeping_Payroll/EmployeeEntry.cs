@@ -15,7 +15,10 @@ namespace MGM_TimeKeeping_Payroll
     public partial class EmployeeEntry : Form
     {
         public const string con = @"Data Source=MGMITM02;Initial Catalog=db_Payroll;Persist Security Info=True;User ID=sa; Password=1234";
+<<<<<<< HEAD
         SqlConnection conn = new SqlConnection(con);
+=======
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
         public EmployeeEntry()
         {
             InitializeComponent();
@@ -42,7 +45,11 @@ namespace MGM_TimeKeeping_Payroll
         #region DatePickers Settings
         private void Datepickers()
         {
+<<<<<<< HEAD
            dt_bdate.Format = DateTimePickerFormat.Custom;
+=======
+          /*  dt_bdate.Format = DateTimePickerFormat.Custom;
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
             dt_datejoined.Format = DateTimePickerFormat.Custom;
          //   dtEffectivedate.Format = DateTimePickerFormat.Custom;
             dateTimePicker4.Format = DateTimePickerFormat.Custom;
@@ -50,8 +57,13 @@ namespace MGM_TimeKeeping_Payroll
             dategrad.CustomFormat = "MM/dd/yyyy"; */
             dt_bdate.CustomFormat = "MM/dd/yyyy";
             dt_datejoined.CustomFormat = "MM/dd/yyyy";
+<<<<<<< HEAD
          //   dtEffectivedate.CustomFormat = "MM/dd/yyyy";
             dateTimePicker4.CustomFormat = "MM/dd/yyyy";
+=======
+            dateTimePicker3.CustomFormat = "MM/dd/yyyy";
+            dateTimePicker4.CustomFormat = "MM/dd/yyyy"; */
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
         }
         #endregion DatePicker Settings
         #region ComputeAge
@@ -68,8 +80,40 @@ namespace MGM_TimeKeeping_Payroll
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
+<<<<<<< HEAD
         {
             AddEmployeeMaster();      
+=======
+        {           
+            SqlConnection conn = new SqlConnection(con);     
+            try
+            {
+                conn.Open();
+                SqlCommand InsertEmployeeMasteer = new SqlCommand("SPInsertMasterEmployee", conn);
+                InsertEmployeeMasteer.CommandType = CommandType.StoredProcedure;
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpID", tb_EmployeeID.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpFName", tb_FName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpMName", tb_MName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpLName", tb_LName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSuffix", tb_Suffix.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@birthdate", dt_bdate.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@CivilStatus", cb_CivilStat.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@Nationality", cb_Nationality.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpTIN", tb_TIN.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSSS", tb_SSS.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpPhilhealthID", tb_PHealth.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSCd", cb_INScode.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSName", tb_INSName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthInsID", tb_insID.Text));
+                SqlCommand InsertEmAdd = new SqlCommand("SPInsertEmployeeAddress", conn);
+                InsertEmAdd.Parameters.Add(new SqlParameter("@EmployeeID", ""));
+                InsertEmAdd.Parameters.Add(new SqlParameter("AddressType", tb_EmployeeID.Text));
+            }
+            finally
+            {
+                conn.Close();
+            }           
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
         }
         private void cb_formpayment_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -174,8 +218,55 @@ namespace MGM_TimeKeeping_Payroll
             #endregion Employment Info
         }
         #endregion Employee Entry Comboboxes                        
+<<<<<<< HEAD
     
 
+=======
+<<<<<<< HEAD
+    
+=======
+
+        private void label80_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_SSSid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
         private void btn_picture_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -188,6 +279,7 @@ namespace MGM_TimeKeeping_Payroll
             } 
         }
 
+<<<<<<< HEAD
         private void AddEmployeeMaster() {
             try
             {
@@ -237,6 +329,27 @@ namespace MGM_TimeKeeping_Payroll
                 conn.Close();
             }
     }
+=======
+        
+
+     
+
+       
+>>>>>>> d4de6728625338ac75e2e0219699a2c8800feaa1
+
+        private void btn_picture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box
+                PicBox_Pic.Image = new Bitmap(open.FileName);              
+            } 
+        }
+
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
        
     }
 }
