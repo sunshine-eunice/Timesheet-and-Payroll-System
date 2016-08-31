@@ -15,13 +15,23 @@ namespace MGM_TimeKeeping_Payroll
     public partial class EmployeeEntry : Form
     {
         public const string con = @"Data Source=MGMITM02;Initial Catalog=db_Payroll;Persist Security Info=True;User ID=sa; Password=1234";
+<<<<<<< HEAD
         SqlConnection conn = new SqlConnection(con);
+=======
+<<<<<<< HEAD
+        SqlConnection conn = new SqlConnection(con);
+=======
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
         public EmployeeEntry()
         {
             InitializeComponent();
             AddComboBoxesItems();
             AddNationality();
+<<<<<<< HEAD
             selectCivilStat();
+=======
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
 
         }
         //public _companygrp CompGrp { get; set; }
@@ -43,7 +53,15 @@ namespace MGM_TimeKeeping_Payroll
         #region DatePickers Settings
         private void Datepickers()
         {
+<<<<<<< HEAD
            dt_bdate.Format = DateTimePickerFormat.Custom;
+=======
+<<<<<<< HEAD
+           dt_bdate.Format = DateTimePickerFormat.Custom;
+=======
+          /*  dt_bdate.Format = DateTimePickerFormat.Custom;
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
             dt_datejoined.Format = DateTimePickerFormat.Custom;
          //   dtEffectivedate.Format = DateTimePickerFormat.Custom;
             dateTimePicker4.Format = DateTimePickerFormat.Custom;
@@ -51,8 +69,16 @@ namespace MGM_TimeKeeping_Payroll
             dategrad.CustomFormat = "MM/dd/yyyy"; */
             dt_bdate.CustomFormat = "MM/dd/yyyy";
             dt_datejoined.CustomFormat = "MM/dd/yyyy";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
          //   dtEffectivedate.CustomFormat = "MM/dd/yyyy";
             dateTimePicker4.CustomFormat = "MM/dd/yyyy";
+=======
+            dateTimePicker3.CustomFormat = "MM/dd/yyyy";
+            dateTimePicker4.CustomFormat = "MM/dd/yyyy"; */
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
         }
         #endregion DatePicker Settings
         #region ComputeAge
@@ -69,11 +95,48 @@ namespace MGM_TimeKeeping_Payroll
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
+<<<<<<< HEAD
         {
             AddEmployeeMaster();
            // AddEmpParents();
             //AddSpouseDetails();
             MessageBox.Show("Employee Account Saved!");
+=======
+<<<<<<< HEAD
+        {
+            AddEmployeeMaster();      
+=======
+        {           
+            SqlConnection conn = new SqlConnection(con);     
+            try
+            {
+                conn.Open();
+                SqlCommand InsertEmployeeMasteer = new SqlCommand("SPInsertMasterEmployee", conn);
+                InsertEmployeeMasteer.CommandType = CommandType.StoredProcedure;
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpID", tb_EmployeeID.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpFName", tb_FName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpMName", tb_MName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpLName", tb_LName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSuffix", tb_Suffix.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@birthdate", dt_bdate.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@CivilStatus", cb_CivilStat.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@Nationality", cb_Nationality.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpTIN", tb_TIN.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSSS", tb_SSS.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpPhilhealthID", tb_PHealth.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSCd", cb_INScode.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSName", tb_INSName.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthInsID", tb_insID.Text));
+                SqlCommand InsertEmAdd = new SqlCommand("SPInsertEmployeeAddress", conn);
+                InsertEmAdd.Parameters.Add(new SqlParameter("@EmployeeID", ""));
+                InsertEmAdd.Parameters.Add(new SqlParameter("AddressType", tb_EmployeeID.Text));
+            }
+            finally
+            {
+                conn.Close();
+            }           
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
         }
         private void cb_formpayment_SelectedValueChanged(object sender, EventArgs e)
         {
@@ -178,8 +241,60 @@ namespace MGM_TimeKeeping_Payroll
             #endregion Employment Info
         }
         #endregion Employee Entry Comboboxes                        
+<<<<<<< HEAD
     
 
+=======
+<<<<<<< HEAD
+    
+
+=======
+<<<<<<< HEAD
+    
+=======
+
+        private void label80_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_SSSid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox19_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
         private void btn_picture_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -192,6 +307,10 @@ namespace MGM_TimeKeeping_Payroll
             } 
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
         private void AddEmployeeMaster() {
             try
             {
@@ -206,15 +325,21 @@ namespace MGM_TimeKeeping_Payroll
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@birthdate", dt_bdate.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@CivilStatus", cb_CivilStat.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@Nationality", cb_Nationality.Text));
+<<<<<<< HEAD
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@sex", cb_sex.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpTIN", tb_TIN.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSSS", tb_SSS.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpPagibigID", tb_pagibig.Text));
+=======
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpTIN", tb_TIN.Text));
+                InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpSSS", tb_SSS.Text));
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@EmpPhilhealthID", tb_PHealth.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSCd", cb_INScode.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthINSName", tb_INSName.Text));
                 InsertEmployeeMasteer.Parameters.Add(new SqlParameter("@HealthInsID", tb_insID.Text));
 
+<<<<<<< HEAD
                 InsertEmployeeMasteer.ExecuteNonQuery();
             }
             finally
@@ -236,11 +361,21 @@ namespace MGM_TimeKeeping_Payroll
                 AddParents.Parameters.Add(new SqlParameter("@EmpMotherMaidMName", tb_MotherMdMName.Text));
                 AddParents.Parameters.Add(new SqlParameter("@EmpMotherFName", tb_MotherFName.Text));
                 //  ChoosePic.Parameters.Add(new SqlParameter("@picture", tb_EmployeeID.Text));
+=======
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
             }
             finally
             {
                 conn.Close();
+<<<<<<< HEAD
             }
+=======
+            }  
+        }
+
+        private void AddEmployeeParents() { 
+            
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
         }
         private void AddNationality() {
 
@@ -251,17 +386,24 @@ namespace MGM_TimeKeeping_Payroll
                 ChooseNatl.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter testcon = new SqlDataAdapter(ChooseNatl);
                 ChooseNatl.ExecuteNonQuery();
+<<<<<<< HEAD
                 DataTable dtNatlity = new DataTable();
                 testcon.Fill(dtNatlity);
                 cb_Nationality.DataSource = dtNatlity;
                 cb_Nationality.DisplayMember = "Nationality";
                 cb_Nationality.ValueMember = "Nationality";
+=======
+                DataSet dtNatlity = new DataSet();
+                testcon.Fill(dtNatlity);
+                cb_Nationality.DataSource = dtNatlity.Tables[0];
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
             }
             finally
             {
                 conn.Close();
             }
     }
+<<<<<<< HEAD
         private void AddSpouseDetails() {
             try
             {
@@ -321,7 +463,29 @@ namespace MGM_TimeKeeping_Payroll
             {
                 conn.Close();
             }
+=======
+=======
+        
+
+     
+
+       
+>>>>>>> d4de6728625338ac75e2e0219699a2c8800feaa1
+
+        private void btn_picture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box
+                PicBox_Pic.Image = new Bitmap(open.FileName);              
+            } 
+>>>>>>> e97b49bfc4155e002f2373e3e2da611d948a1c4a
         }
 
+>>>>>>> 248da7df2486e9285878699750accbde23eae2a0
+       
     }
 }
