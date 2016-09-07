@@ -72,6 +72,7 @@
             this.utilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insurancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -177,8 +178,12 @@
             // 
             this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eToolStripMenuItem,
+<<<<<<< HEAD
             this.insurancesToolStripMenuItem,
             this.banksToolStripMenuItem});
+=======
+            this.insurancesToolStripMenuItem});
+>>>>>>> 14ad7b7a91c349b24b4efebdd7ebda92aa325318
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(192, 22);
             this.toolStripMenuItem5.Text = "Employer Profile";
@@ -401,6 +406,12 @@
             this.notesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.notesToolStripMenuItem.Text = "Notes";
             // 
+            // insurancesToolStripMenuItem
+            // 
+            this.insurancesToolStripMenuItem.Name = "insurancesToolStripMenuItem";
+            this.insurancesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.insurancesToolStripMenuItem.Text = "Insurances";
+            // 
             // MGMTimesheet_Payroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,6 +478,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem performanceEvaluationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem insurancesToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
+=======
+>>>>>>> 14ad7b7a91c349b24b4efebdd7ebda92aa325318
     }
 }
