@@ -47,7 +47,8 @@ namespace MGM_TimeKeeping_Payroll
         {
             DataTable tb_sheet = ConverttoDataTable(tb_filename.Text);
             dgv_Timesheet.DataSource = tb_sheet;            
-            Sum_totalHrs(); 
+            Sum_totalHrs();
+            MinutesOfLates();
         }
 
         private void btn_browse_Click(object sender, EventArgs e)
@@ -84,7 +85,6 @@ namespace MGM_TimeKeeping_Payroll
         }
       
         private void Sum_totalHrs() {
-
             double sum = 0;
             //sum += Convert.ToDouble(dgv_Timesheet.Rows.Cells[8].Value);
           for (int i = 0; i < dgv_Timesheet.Rows.Count; ++i)
@@ -133,6 +133,29 @@ namespace MGM_TimeKeeping_Payroll
                 dt.Rows.Add(dr);
             }
             return dt;  
-        } 
+        }
+       
+        private void MinutesOfLates()
+        {
+            TimeSpan late_duration;
+            double sum_late = 0;
+            DateTime start_time;
+            DateTime.TryParse("08:00:00", out start_time); // to be replaced by parameter of schedule_start**
+            TimeSpan timestart = start_time.TimeOfDay;
+            TimeSpan timein;         
+
+            for (int i = 0; i<dgv_Timesheet.Rows.Count; ++i)
+            {
+                timein = TimeSpan.Parse(Convert.ToString(dgv_Timesheet.Rows[i].Cells[5].Value));
+                late_duration = timein.Subtract(timestart);
+                double tot_minute = late_duration.TotalMinutes;
+
+                if (tot_minute > 0)
+                {
+                    sum_late += tot_minute;
+                }
+            }
+            tb_MinsOfLate.Text = sum_late.ToString();
+        }
    }
 }
