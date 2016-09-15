@@ -42,6 +42,8 @@
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insurancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.banksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginAnotherUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginAnotherUserToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,6 +116,7 @@
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
             this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // viewEmployeeToolStripMenuItem
             // 
@@ -162,6 +165,7 @@
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(192, 22);
             this.toolStripMenuItem6.Text = "Department Profile";
+//            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripMenuItem7
             // 
@@ -172,7 +176,9 @@
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eToolStripMenuItem});
+            this.eToolStripMenuItem,
+            this.insurancesToolStripMenuItem,
+            this.banksToolStripMenuItem});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(192, 22);
             this.toolStripMenuItem5.Text = "Employer Profile";
@@ -180,9 +186,21 @@
             // eToolStripMenuItem
             // 
             this.eToolStripMenuItem.Name = "eToolStripMenuItem";
-            this.eToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.eToolStripMenuItem.Text = "Add Agency/Employer";
+            this.eToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.eToolStripMenuItem.Text = "Agency/Employer";
             this.eToolStripMenuItem.Click += new System.EventHandler(this.eToolStripMenuItem_Click);
+            // 
+            // insurancesToolStripMenuItem
+            // 
+            this.insurancesToolStripMenuItem.Name = "insurancesToolStripMenuItem";
+            this.insurancesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.insurancesToolStripMenuItem.Text = "Insurances";
+            // 
+            // banksToolStripMenuItem
+            // 
+            this.banksToolStripMenuItem.Name = "banksToolStripMenuItem";
+            this.banksToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.banksToolStripMenuItem.Text = "Banks";
             // 
             // loginAnotherUserToolStripMenuItem
             // 
@@ -448,5 +466,7 @@
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem performanceEvaluationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insurancesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
     }
 }
