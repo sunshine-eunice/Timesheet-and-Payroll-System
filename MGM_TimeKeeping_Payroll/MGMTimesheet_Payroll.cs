@@ -63,9 +63,24 @@ namespace MGM_TimeKeeping_Payroll
             EmployeeEntry form = new EmployeeEntry();
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2536f86dc0442618af86a0c7b8e2ad35682d5456
         }
 
        
  
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        }
+ 
+=======
+        }      
+>>>>>>> 14ad7b7a91c349b24b4efebdd7ebda92aa325318
+>>>>>>> c7dda9f23b8cb9b4005d6cade16f8ebfc32f0a18
+>>>>>>> 2536f86dc0442618af86a0c7b8e2ad35682d5456
     }
 }
