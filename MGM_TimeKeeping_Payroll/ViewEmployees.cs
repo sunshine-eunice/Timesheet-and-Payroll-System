@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+<<<<<<< HEAD
 using System.Data.SqlClient;
+=======
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,11 +16,15 @@ namespace MGM_TimeKeeping_Payroll
 {
     public partial class ViewEmployees : Form
     {
+<<<<<<< HEAD
         public const string con = @"Data Source=MGMITM02;Initial Catalog=db_Payroll;Persist Security Info=True;User ID=sa; Password=1234";
+=======
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
         public ViewEmployees()
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -30,5 +37,7 @@ namespace MGM_TimeKeeping_Payroll
             dgViewEmployees.ReadOnly = true;
             dgViewEmployees.DataSource = ds.Tables[0];
         }
+=======
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
     }
 }

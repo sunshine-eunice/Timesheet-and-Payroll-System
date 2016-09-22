@@ -108,12 +108,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="GenerateID.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GenerateID.Designer.cs">
       <DependentUpon>GenerateID.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
     <Compile Include="TimesheeettoDatagridview.cs" />
     <Compile Include="ViewEmployees.cs">
       <SubType>Form</SubType>
@@ -121,9 +124,12 @@
     <Compile Include="ViewEmployees.Designer.cs">
       <DependentUpon>ViewEmployees.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Departments.resx">
       <DependentUpon>Departments.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
     <EmbeddedResource Include="EmployeeEntry.resx">
       <DependentUpon>EmployeeEntry.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +155,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="GenerateID.resx">
       <DependentUpon>GenerateID.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +165,11 @@
     <None Include="Employee List1.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+=======
+    <EmbeddedResource Include="ViewEmployees.resx">
+      <DependentUpon>ViewEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
