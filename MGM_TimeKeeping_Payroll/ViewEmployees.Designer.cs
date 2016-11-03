@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
             this.dgViewEmployees = new System.Windows.Forms.DataGridView();
             this.btnSave = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -87,12 +91,32 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 20);
             this.textBox1.TabIndex = 8;
+<<<<<<< HEAD
+=======
+=======
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(43, 70);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(815, 322);
+            this.dataGridView1.TabIndex = 0;
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
             // 
             // ViewEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 432);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -104,17 +128,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgViewEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+<<<<<<< HEAD
+=======
+=======
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "ViewEmployees";
+            this.Text = "Employee Lists";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
 
         }
 
         #endregion
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
         private System.Windows.Forms.DataGridView dgViewEmployees;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
+<<<<<<< HEAD
+=======
+=======
+        private System.Windows.Forms.DataGridView dataGridView1;
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
 
     }
 }

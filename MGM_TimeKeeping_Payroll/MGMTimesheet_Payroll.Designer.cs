@@ -70,6 +70,7 @@
             this.utilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insurancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,10 +126,54 @@
             // 
             // tSDepartment
             // 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
             this.tSDepartment.Name = "tSDepartment";
             this.tSDepartment.Size = new System.Drawing.Size(192, 22);
             this.tSDepartment.Text = "Department Profile";
             this.tSDepartment.Click += new System.EventHandler(this.tSDepartment_Click);
+<<<<<<< HEAD
+=======
+=======
+            this.permanentToolStripMenuItem.Name = "permanentToolStripMenuItem";
+            this.permanentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.permanentToolStripMenuItem.Text = "Permanent";
+            // 
+            // regularToolStripMenuItem
+            // 
+            this.regularToolStripMenuItem.Name = "regularToolStripMenuItem";
+            this.regularToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.regularToolStripMenuItem.Text = "Regular";
+            // 
+            // casualToolStripMenuItem1
+            // 
+            this.casualToolStripMenuItem1.Name = "casualToolStripMenuItem1";
+            this.casualToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.casualToolStripMenuItem1.Text = "Casual";
+            // 
+            // probationaryToolStripMenuItem
+            // 
+            this.probationaryToolStripMenuItem.Name = "probationaryToolStripMenuItem";
+            this.probationaryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.probationaryToolStripMenuItem.Text = "Probationary";
+            // 
+            // allEmployeeToolStripMenuItem
+            // 
+            this.allEmployeeToolStripMenuItem.Name = "allEmployeeToolStripMenuItem";
+            this.allEmployeeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.allEmployeeToolStripMenuItem.Text = "All Employee";
+//            this.allEmployeeToolStripMenuItem.Click += new System.EventHandler(this.allEmployeeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(192, 22);
+            this.toolStripMenuItem6.Text = "Department Profile";
+//            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
             // 
             // toolStripMenuItem7
             // 
@@ -140,8 +185,32 @@
             // 
             this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.eToolStripMenuItem,
+<<<<<<< HEAD
             this.insurancesToolStripMenuItem,
             this.banksToolStripMenuItem});
+=======
+<<<<<<< HEAD
+            this.insurancesToolStripMenuItem,
+            this.banksToolStripMenuItem});
+=======
+<<<<<<< HEAD
+            this.insurancesToolStripMenuItem,
+            this.banksToolStripMenuItem});
+=======
+<<<<<<< HEAD
+            this.insurancesToolStripMenuItem,
+            this.banksToolStripMenuItem});
+=======
+<<<<<<< HEAD
+            this.insurancesToolStripMenuItem,
+            this.banksToolStripMenuItem});
+=======
+            this.insurancesToolStripMenuItem});
+>>>>>>> 14ad7b7a91c349b24b4efebdd7ebda92aa325318
+>>>>>>> c7dda9f23b8cb9b4005d6cade16f8ebfc32f0a18
+>>>>>>> 2536f86dc0442618af86a0c7b8e2ad35682d5456
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(192, 22);
             this.toolStripMenuItem5.Text = "Employer Profile";
@@ -386,6 +455,12 @@
             this.notesToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.notesToolStripMenuItem.Text = "Notes";
             // 
+            // insurancesToolStripMenuItem
+            // 
+            this.insurancesToolStripMenuItem.Name = "insurancesToolStripMenuItem";
+            this.insurancesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.insurancesToolStripMenuItem.Text = "Insurances";
+            // 
             // MGMTimesheet_Payroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,9 +522,28 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem performanceEvaluationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem insurancesToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeScheduleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uploadScheduleTimesheetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
+=======
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
+=======
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
+=======
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
+=======
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
+=======
+>>>>>>> 14ad7b7a91c349b24b4efebdd7ebda92aa325318
+>>>>>>> c7dda9f23b8cb9b4005d6cade16f8ebfc32f0a18
+>>>>>>> 2536f86dc0442618af86a0c7b8e2ad35682d5456
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
     }
 }

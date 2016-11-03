@@ -22,6 +22,10 @@ namespace MGM_TimeKeeping_Payroll
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
         private void samplereport_Load(object sender, EventArgs e)
         {
             this.reportEmployee.RefreshReport();
@@ -58,4 +62,8 @@ namespace MGM_TimeKeeping_Payroll
             da.Fill(ds, "reportEmployee");           
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3

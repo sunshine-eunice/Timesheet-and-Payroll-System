@@ -122,6 +122,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="GenerateID.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,23 +140,45 @@
     </Compile>
     <Compile Include="SearchEmployee.Designer.cs">
       <DependentUpon>SearchEmployee.cs</DependentUpon>
+=======
+<<<<<<< HEAD
+    <Compile Include="GenerateID.cs">
+      <SubType>Form</SubType>
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
     </Compile>
+    <Compile Include="GenerateID.Designer.cs">
+      <DependentUpon>GenerateID.cs</DependentUpon>
+    </Compile>
+=======
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
     <Compile Include="TimesheeettoDatagridview.cs" />
+<<<<<<< HEAD
     <Compile Include="UploadEmployeeWrkHrs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UploadEmployeeWrkHrs.Designer.cs">
       <DependentUpon>UploadEmployeeWrkHrs.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
     <Compile Include="ViewEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ViewEmployees.Designer.cs">
       <DependentUpon>ViewEmployees.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Departments.resx">
       <DependentUpon>Departments.cs</DependentUpon>
     </EmbeddedResource>
+=======
+<<<<<<< HEAD
+    <EmbeddedResource Include="Departments.resx">
+      <DependentUpon>Departments.cs</DependentUpon>
+    </EmbeddedResource>
+=======
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
     <EmbeddedResource Include="EmployeeEntry.resx">
       <DependentUpon>EmployeeEntry.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +204,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="GenerateID.resx">
       <DependentUpon>GenerateID.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,13 +217,27 @@
     <EmbeddedResource Include="UploadEmployeeWrkHrs.resx">
       <DependentUpon>UploadEmployeeWrkHrs.cs</DependentUpon>
     </EmbeddedResource>
+=======
+<<<<<<< HEAD
+    <EmbeddedResource Include="GenerateID.resx">
+      <DependentUpon>GenerateID.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
     <EmbeddedResource Include="ViewEmployees.resx">
       <DependentUpon>ViewEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Employee List1.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+<<<<<<< HEAD
     <None Include="MGM_TimeKeeping_Payroll_TemporaryKey.pfx" />
+=======
+=======
+    <EmbeddedResource Include="ViewEmployees.resx">
+      <DependentUpon>ViewEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 97601d51e6adeb8a230356318568d731d2fc7e94
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -241,9 +279,12 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <None Include="Images\x-btn.png" />
   </ItemGroup>
+=======
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -34,4 +34,8 @@ namespace MGM_TimeKeeping_Payroll
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4931e3070da34a7dd584433511cdd3dec2f876a3
