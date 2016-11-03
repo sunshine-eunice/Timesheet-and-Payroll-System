@@ -19,9 +19,9 @@ namespace MGM_TimeKeeping_Payroll
         }
 
         private void btn_ok_Click(object sender, EventArgs e)  {
-            SqlConnection cn = new SqlConnection(@"Data Source=MGMITM02;Initial Catalog=Test1;Persist Security Info=True;User ID=sa; Password=1234");
+            SqlConnection cn = new SqlConnection(@"Data Source=MGMITM02;Initial Catalog=db_Payroll;Persist Security Info=True;User ID=sa; Password=1234");
                 cn.Open();
-                SqlCommand cmd  =   new SqlCommand("SELECT * FROM login WHERE Username= '"+tb_username.Text+"' AND Password= '"+tb_password.Text+"'", cn);
+                SqlCommand cmd  =   new SqlCommand("SELECT * FROM Login WHERE Username= '"+tb_username.Text+"' AND Password= '"+tb_password.Text+"'", cn);
                 SqlDataReader dr;
                 dr  =   cmd.ExecuteReader();
                 int count = 0;
@@ -30,8 +30,7 @@ namespace MGM_TimeKeeping_Payroll
                     count   +=  1;
                 }
 
-            if (count == 1)
-            {
+            if (count == 1)    {
                 this.Close();
             }
             else {
@@ -45,8 +44,7 @@ namespace MGM_TimeKeeping_Payroll
             tb_username.Clear();
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
-        {
+        private void btn_cancel_Click(object sender, EventArgs e)    {
             //causing error
             Application.Exit();
         }

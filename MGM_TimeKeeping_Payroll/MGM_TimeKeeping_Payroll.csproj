@@ -12,7 +12,9 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\sunshine.crisostomo\Documents\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,12 +24,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,9 +49,25 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>682D04B97AF68B7A0CFA1BBCAD2C8D9555754610</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MGM_TimeKeeping_Payroll_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,8 +79,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassUtils.cs" />
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="ConvertTextFiletoDataSet.cs" />
+    <Compile Include="Departments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Departments.Designer.cs">
+      <DependentUpon>Departments.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,12 +122,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Test1DataSet.xsd</DependentUpon>
+    <Compile Include="GenerateID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateID.Designer.cs">
+      <DependentUpon>GenerateID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleEmployeeWrkHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleEmployeeWrkHours.Designer.cs">
+      <DependentUpon>ScheduleEmployeeWrkHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchEmployee.Designer.cs">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="TimesheeettoDatagridview.cs" />
+    <Compile Include="UploadEmployeeWrkHrs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadEmployeeWrkHrs.Designer.cs">
+      <DependentUpon>UploadEmployeeWrkHrs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewEmployees.Designer.cs">
+      <DependentUpon>ViewEmployees.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Departments.resx">
+      <DependentUpon>Departments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeEntry.resx">
       <DependentUpon>EmployeeEntry.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +181,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="GenerateID.resx">
+      <DependentUpon>GenerateID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleEmployeeWrkHours.resx">
+      <DependentUpon>ScheduleEmployeeWrkHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchEmployee.resx">
+      <DependentUpon>SearchEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadEmployeeWrkHrs.resx">
+      <DependentUpon>UploadEmployeeWrkHrs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewEmployees.resx">
+      <DependentUpon>ViewEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Employee List1.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="MGM_TimeKeeping_Payroll_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,20 +209,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Test1DataSet.xsc">
-      <DependentUpon>Test1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Test1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Test1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Test1DataSet.xss">
-      <DependentUpon>Test1DataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\mgmpay_ background.jpg" />
@@ -165,11 +227,22 @@
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\x-btn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

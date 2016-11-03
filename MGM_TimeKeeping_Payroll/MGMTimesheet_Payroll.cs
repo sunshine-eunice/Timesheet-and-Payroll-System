@@ -19,7 +19,9 @@ namespace MGM_TimeKeeping_Payroll
 
         private void MGMTimesheet_Payroll_Load(object sender, EventArgs e)
         {
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            WindowState = FormWindowState.Maximized;
+            MaximumSize = this.Size;
+            MinimumSize = this.Size;
             Login show = new Login();
             show.StartPosition = FormStartPosition.CenterParent;
             show.ShowDialog();           
@@ -38,8 +40,7 @@ namespace MGM_TimeKeeping_Payroll
             form.ShowDialog();
         }
       /*  private void timesheetToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
+        {            
         }
         */
         private void eToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +55,27 @@ namespace MGM_TimeKeeping_Payroll
         private void toolStripMenuItem8_Click(object sender, EventArgs e)
         {
             EmployeeTnP form = new EmployeeTnP();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+        }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeeEntry form = new EmployeeEntry();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
+        }
+
+        private void viewEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewEmployees form = new ViewEmployees();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+        }
+
+        private void tSDepartment_Click(object sender, EventArgs e)
+        {
+            Departments form = new Departments();
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog();
         }      

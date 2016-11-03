@@ -33,20 +33,20 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.permanentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.regularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.casualToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.probationaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tSDepartment = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.eToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insurancesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.banksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginAnotherUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginAnotherUserToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timesheetAndPayrollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addEmployeeScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uploadScheduleTimesheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.payrollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.performanceEvaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,7 +90,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem4,
-            this.toolStripMenuItem6,
+            this.tSDepartment,
             this.toolStripMenuItem7,
             this.toolStripMenuItem5,
             this.loginAnotherUserToolStripMenuItem,
@@ -114,54 +114,21 @@
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
             this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // viewEmployeeToolStripMenuItem
             // 
-            this.viewEmployeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.permanentToolStripMenuItem,
-            this.regularToolStripMenuItem,
-            this.casualToolStripMenuItem1,
-            this.probationaryToolStripMenuItem,
-            this.allEmployeeToolStripMenuItem});
             this.viewEmployeeToolStripMenuItem.Name = "viewEmployeeToolStripMenuItem";
             this.viewEmployeeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.viewEmployeeToolStripMenuItem.Text = "View Employee";
+            this.viewEmployeeToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeeToolStripMenuItem_Click);
             // 
-            // permanentToolStripMenuItem
+            // tSDepartment
             // 
-            this.permanentToolStripMenuItem.Name = "permanentToolStripMenuItem";
-            this.permanentToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.permanentToolStripMenuItem.Text = "Permanent";
-            // 
-            // regularToolStripMenuItem
-            // 
-            this.regularToolStripMenuItem.Name = "regularToolStripMenuItem";
-            this.regularToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.regularToolStripMenuItem.Text = "Regular";
-            // 
-            // casualToolStripMenuItem1
-            // 
-            this.casualToolStripMenuItem1.Name = "casualToolStripMenuItem1";
-            this.casualToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
-            this.casualToolStripMenuItem1.Text = "Casual";
-            // 
-            // probationaryToolStripMenuItem
-            // 
-            this.probationaryToolStripMenuItem.Name = "probationaryToolStripMenuItem";
-            this.probationaryToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.probationaryToolStripMenuItem.Text = "Probationary";
-            // 
-            // allEmployeeToolStripMenuItem
-            // 
-            this.allEmployeeToolStripMenuItem.Name = "allEmployeeToolStripMenuItem";
-            this.allEmployeeToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.allEmployeeToolStripMenuItem.Text = "All Employee";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(192, 22);
-            this.toolStripMenuItem6.Text = "Department Profile";
+            this.tSDepartment.Name = "tSDepartment";
+            this.tSDepartment.Size = new System.Drawing.Size(192, 22);
+            this.tSDepartment.Text = "Department Profile";
+            this.tSDepartment.Click += new System.EventHandler(this.tSDepartment_Click);
             // 
             // toolStripMenuItem7
             // 
@@ -172,7 +139,9 @@
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eToolStripMenuItem});
+            this.eToolStripMenuItem,
+            this.insurancesToolStripMenuItem,
+            this.banksToolStripMenuItem});
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(192, 22);
             this.toolStripMenuItem5.Text = "Employer Profile";
@@ -180,9 +149,21 @@
             // eToolStripMenuItem
             // 
             this.eToolStripMenuItem.Name = "eToolStripMenuItem";
-            this.eToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.eToolStripMenuItem.Text = "Add Agency/Employer";
+            this.eToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.eToolStripMenuItem.Text = "Agency/Employer";
             this.eToolStripMenuItem.Click += new System.EventHandler(this.eToolStripMenuItem_Click);
+            // 
+            // insurancesToolStripMenuItem
+            // 
+            this.insurancesToolStripMenuItem.Name = "insurancesToolStripMenuItem";
+            this.insurancesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.insurancesToolStripMenuItem.Text = "Insurances";
+            // 
+            // banksToolStripMenuItem
+            // 
+            this.banksToolStripMenuItem.Name = "banksToolStripMenuItem";
+            this.banksToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.banksToolStripMenuItem.Text = "Banks";
             // 
             // loginAnotherUserToolStripMenuItem
             // 
@@ -215,10 +196,32 @@
             // 
             // toolStripMenuItem8
             // 
+            this.toolStripMenuItem8.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addEmployeeScheduleToolStripMenuItem,
+            this.uploadScheduleTimesheetToolStripMenuItem,
+            this.calculateToolStripMenuItem});
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
             this.toolStripMenuItem8.Size = new System.Drawing.Size(200, 22);
             this.toolStripMenuItem8.Text = "Timekeeping";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            // 
+            // addEmployeeScheduleToolStripMenuItem
+            // 
+            this.addEmployeeScheduleToolStripMenuItem.Name = "addEmployeeScheduleToolStripMenuItem";
+            this.addEmployeeScheduleToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.addEmployeeScheduleToolStripMenuItem.Text = "Add Employee Schedule";
+            // 
+            // uploadScheduleTimesheetToolStripMenuItem
+            // 
+            this.uploadScheduleTimesheetToolStripMenuItem.Name = "uploadScheduleTimesheetToolStripMenuItem";
+            this.uploadScheduleTimesheetToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.uploadScheduleTimesheetToolStripMenuItem.Text = "Upload Schedule Timesheet";
+            // 
+            // calculateToolStripMenuItem
+            // 
+            this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.calculateToolStripMenuItem.Text = "Calculate Total Hours Spent";
             // 
             // payrollToolStripMenuItem
             // 
@@ -437,16 +440,16 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewEmployeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem permanentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem regularToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem casualToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem probationaryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allEmployeeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem tSDepartment;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem eToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem performanceEvaluationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insurancesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem banksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addEmployeeScheduleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uploadScheduleTimesheetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
     }
 }

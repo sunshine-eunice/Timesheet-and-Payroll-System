@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb_workhrs = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_MinsOfLate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -153,13 +153,13 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Total Lates:";
             // 
-            // textBox2
+            // tb_MinsOfLate
             // 
-            this.textBox2.Location = new System.Drawing.Point(669, 382);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(267, 20);
-            this.textBox2.TabIndex = 22;
+            this.tb_MinsOfLate.Location = new System.Drawing.Point(669, 382);
+            this.tb_MinsOfLate.Name = "tb_MinsOfLate";
+            this.tb_MinsOfLate.ReadOnly = true;
+            this.tb_MinsOfLate.Size = new System.Drawing.Size(267, 20);
+            this.tb_MinsOfLate.TabIndex = 22;
             // 
             // label5
             // 
@@ -272,7 +272,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_MinsOfLate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tb_workhrs);
             this.Controls.Add(this.label2);
@@ -307,7 +307,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_workhrs;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_MinsOfLate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
